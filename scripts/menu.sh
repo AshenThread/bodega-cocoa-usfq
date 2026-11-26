@@ -1,10 +1,21 @@
 #!/usr/bin/env bash
+# =============================================================================
 # Bodega COCOA USFQ — hoja de comandos del proyecto
+# -----------------------------------------------------------------------------
+# Auditoría / autoría
+#   Autor:     Ismael Zambrano
+#   Equipo:    Grupo 1 (Ismael Zambrano, Paula Hidalgo, Amelia Duclos)
+#   Proyecto:  Bodega COCOA USFQ · Web Development 3
+#   Repo:      https://github.com/AshenThread/bodega-cocoa-usfq
+#   Licencia:  Uso académico del equipo — no redistribuir sin crédito al autor
+# =============================================================================
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
+SCRIPT_AUTHOR="Ismael Zambrano"
+SCRIPT_NAME="menu.sh"
 ESTADO_FILE="$ROOT/docs/estado.md"
 REPO_URL="https://github.com/AshenThread/bodega-cocoa-usfq"
 
@@ -46,6 +57,7 @@ escribir_estado() {
 - **Repo:** $REPO_URL
 - **GitHub:** $remote_status
 - **Commit:** \`$(git rev-parse --short HEAD 2>/dev/null || echo n/a)\`
+- **Scripts (autoría):** $SCRIPT_AUTHOR — \`$SCRIPT_NAME\`
 
 ## Entrega actual
 
@@ -275,6 +287,10 @@ mostrar_menu() {
   bold "╔════════════════════════════════════════╗"
   bold "║   Bodega COCOA USFQ · hoja de comandos ║"
   bold "╚════════════════════════════════════════╝"
+  echo
+  printf "  Autoría scripts: "
+  grn "$SCRIPT_AUTHOR"
+  echo "  Archivo: scripts/$SCRIPT_NAME"
   echo
   echo "  [1] Revisión actual (local + GitHub + recomendaciones)"
   echo "  [2] Actualizar repo y estado"

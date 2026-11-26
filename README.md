@@ -38,6 +38,8 @@ Plataforma web para que estudiantes y profesores reserven equipos y espacios de 
 
 ## Hoja de comandos
 
+**Autoría de scripts:** Ismael Zambrano · ver [`scripts/AUTORIA.md`](scripts/AUTORIA.md)
+
 ```bash
 ./scripts/menu.sh
 ```
