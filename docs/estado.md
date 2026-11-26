@@ -1,11 +1,11 @@
 # Estado del proyecto — Bodega COCOA USFQ
 
-- **Actualizado:** 2026-11-25 22:38:44 -05
-- **Nota:** Revisión sin cambios — ya sincronizado
+- **Actualizado:** 2026-11-25 22:39:15 -05
+- **Nota:** Repo actualizado vía menú opción 2
 - **Rama:** `main`
 - **Repo:** https://github.com/AshenThread/bodega-cocoa-usfq
 - **GitHub:** Sincronizado con origin/main
-- **Commit:** `2e6e301`
+- **Commit:** `477a072`
 - **Scripts (autoría):** Ismael Zambrano — `menu.sh`
 
 ## Entrega actual
