@@ -2,20 +2,20 @@
 
 Sistema de reservas de equipos audiovisuales de la Bodega COCOA — Universidad San Francisco de Quito.
 
-**Proyecto final · Web Development 3**  
+**Proyecto final · Web Development 3 · Avance #2**  
 **Equipo:** Grupo 1 — Ismael Zambrano, Paula Hidalgo, Amelia Duclos
 
 ## Descripción
 
 Plataforma web para que estudiantes y profesores reserven equipos y espacios de forma autónoma, con selección de unidades específicas (ID único), carrito multi-ítem, notificaciones por correo y gestión manual completa por el administrador.
 
-## Documentación
+## Entrega Avance #2
 
-| Documento | Ubicación |
-|-----------|-----------|
-| Product Requirements (PRD) | [`docs/prd/prd.md`](docs/prd/prd.md) |
-| Sistema de diseño | [`DESIGN.md`](DESIGN.md) |
-| Brand board | [`docs/diseno/`](docs/diseno/) |
+| Documento | Ubicación | Créditos |
+|-----------|-----------|----------|
+| PRD | [`docs/prd/prd.md`](docs/prd/prd.md) | Equipo |
+| Brand board | [`docs/diseno/brand-board.html`](docs/diseno/brand-board.html) · [`brand-board.jpg`](docs/diseno/brand-board.jpg) | Paula Hidalgo, Amelia Duclos |
+| Sistema de diseño | [`DESIGN.md`](DESIGN.md) | Paula Hidalgo, Amelia Duclos (identidad); Ismael Zambrano (repo) |
 
 ## Reglas clave del MVP
 
@@ -38,15 +38,13 @@ Plataforma web para que estudiantes y profesores reserven equipos y espacios de 
 
 ## Hooks de commits (autoría humana)
 
-Para que cada commit quede a nombre del integrante (sin co-autoría de IA):
-
 ```bash
 git config core.hooksPath .githooks
 ```
 
-- `.githooks/` — `prepare-commit-msg` y `commit-msg` (Git)
-- `.cursor/hooks/` — guarda commits del agente en Cursor
+- `.githooks/` — limpia/bloquea co-autoría de IA
+- `.cursor/hooks/` — valida `--author` en commits del agente
 
 ## Estado
 
-Estructura inicial del repositorio. Pendiente de implementación de las épicas del MVP.
+Documentación del Avance #2 lista (PRD, brand board, DESIGN.md). Pendiente implementación de épicas en el Avance #3.

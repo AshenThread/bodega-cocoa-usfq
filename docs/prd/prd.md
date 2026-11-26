@@ -137,4 +137,4 @@ Funcionalidades que el cliente podrá probar en el avance 3 y en la presentació
 
 ## 10. Uso de IA
 
-Se utilizó Grok (xAI) para estructurar el PRD a partir de los cinco resúmenes de la entrevista y las respuestas detalladas de la visita del 11/11/26. La herramienta ayudó a consolidar reglas de negocio, detectar consistencias y redactar secciones. Todas las decisiones finales fueron revisadas por el equipo y están basadas exclusivamente en lo dicho por el cliente o en supuestos explícitamente declarados.
+Se utilizó Grok (xAI) para estructurar el PRD a partir de los cinco resúmenes de la entrevista y las respuestas detalladas de la visita del 11/11/26. La herramienta ayudó a consolidar reglas de negocio, detectar consistencias y redactar secciones. Para el sistema de diseño y la puesta en repo se usó Cursor como apoyo de redacción a partir del brand board. La identidad visual (brand board y dirección de diseño) es de **Paula Hidalgo** y **Amelia Duclos**. Todas las decisiones finales fueron revisadas por el equipo y están basadas exclusivamente en lo dicho por el cliente o en supuestos explícitamente declarados.

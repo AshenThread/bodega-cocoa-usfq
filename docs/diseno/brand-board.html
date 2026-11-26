@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brand Board — Bodega COCOA USFQ</title>
+  <style>
+    :root {
+      --rojo: #E11B22;
+      --negro: #231F20;
+      --gris: #939598;
+      --blanco: #FFFFFF;
+      --success: #16A34A;
+      --warning: #F59E0B;
+      --danger: #DC2626;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif: Baskerville, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--negro);
+      background: #ECECEC;
+      line-height: 1.45;
+    }
+
+    .board {
+      max-width: 1100px;
+      margin: 24px auto;
+      background: var(--blanco);
+      box-shadow: 0 8px 32px rgba(35, 31, 32, 0.12);
+    }
+
+    .hero {
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 40px 48px 36px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .logo-bodega {
+      font-size: 18px;
+      letter-spacing: 0.28em;
+      font-weight: 300;
+    }
+
+    .logo-cocoa {
+      font-size: 64px;
+      line-height: 0.9;
+      font-weight: 700;
+      color: var(--rojo);
+      letter-spacing: 0.02em;
+    }
+
+    .tagline {
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #D0D1D2;
+      text-transform: uppercase;
+    }
+
+    .slogan {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-align: right;
+      max-width: 280px;
+    }
+
+    .slogan span { color: var(--rojo); }
+
+    .keywords {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #D0D1D2;
+    }
+
+    .keywords strong { color: var(--blanco); font-weight: 700; }
+
+    .credits {
+      font-size: 12px;
+      color: #D0D1D2;
+    }
+
+    .credits strong { color: var(--blanco); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 0;
+    }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .logo-cocoa { font-size: 48px; }
+      .hero { padding: 28px 24px; }
+      section { padding: 24px !important; }
+    }
+
+    section {
+      padding: 28px 36px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    section h2 {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5C5E60;
+      margin-bottom: 16px;
+    }
+
+    section h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .swatch {
+      border: 1px solid #E5E5E5;
+      overflow: hidden;
+    }
+
+    .swatch .chip {
+      height: 56px;
+    }
+
+    .swatch .meta {
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+
+    .swatch .meta code {
+      display: block;
+      color: #5C5E60;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .type-row {
+      margin-bottom: 14px;
+    }
+
+    .type-row .name {
+      font-size: 13px;
+      color: #5C5E60;
+      margin-bottom: 4px;
+    }
+
+    .type-helvetica { font-family: var(--sans); font-size: 28px; font-weight: 700; }
+    .type-baskerville { font-family: var(--serif); font-size: 26px; }
+    .type-scale {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      font-size: 13px;
+      color: #5C5E60;
+      margin-top: 12px;
+    }
+
+    .type-scale span { color: var(--negro); font-weight: 700; }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--rojo);
+      color: var(--blanco);
+      border: none;
+    }
+
+    .btn-secondary {
+      background: var(--blanco);
+      color: var(--negro);
+      border: 1.5px solid var(--negro);
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+      max-width: 320px;
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .field input {
+      height: 44px;
+      border: 1px solid var(--gris);
+      border-radius: 4px;
+      padding: 0 12px;
+      font: inherit;
+      color: var(--negro);
+    }
+
+    .field input:focus {
+      outline: 2px solid var(--rojo);
+      border-color: var(--rojo);
+    }
+
+    .card {
+      border: 1px solid #E5E5E5;
+      border-radius: 8px;
+      padding: 16px;
+      max-width: 320px;
+      background: var(--blanco);
+    }
+
+    .card .photo {
+      height: 120px;
+      background:
+        linear-gradient(135deg, #2a2627 0%, #4a4445 50%, #231F20 100%);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      display: grid;
+      place-items: center;
+      color: #D0D1D2;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 8px 0 12px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+    }
+
+    .states {
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .state {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 10px;
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+    }
+
+    .pill {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .pill.gris { color: #5C5E60; }
+    .pill.ok { color: var(--success); }
+    .pill.warn { color: var(--warning); }
+    .pill.bad { color: var(--danger); }
+
+    .screen {
+      border: 1px solid #E5E5E5;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--blanco);
+    }
+
+    .screen-bar {
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .screen-bar .brand span { color: var(--rojo); font-weight: 700; }
+
+    .screen-nav {
+      display: flex;
+      gap: 14px;
+      color: #D0D1D2;
+    }
+
+    .screen-body {
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .screen-body { grid-template-columns: 1fr; }
+    }
+
+    .cats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .cat {
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      padding: 14px 8px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .cal {
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 11px;
+    }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    .cal-grid span {
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 2px;
+      background: #F5F5F5;
+    }
+
+    .cal-grid .on {
+      background: var(--rojo);
+      color: var(--blanco);
+      font-weight: 700;
+    }
+
+    .voice {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .voice { grid-template-columns: 1fr; }
+    }
+
+    .voice-box {
+      border: 1px solid #E5E5E5;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .voice-box h4 {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .voice-box.yes h4 { color: var(--success); }
+    .voice-box.no h4 { color: var(--danger); }
+
+    .voice-box ul {
+      padding-left: 18px;
+      font-size: 14px;
+    }
+
+    .voice-box li { margin-bottom: 6px; }
+
+    .ref {
+      padding: 20px 36px 28px;
+      font-size: 13px;
+      color: #5C5E60;
+    }
+
+    .ref a { color: var(--rojo); }
+
+    .photo-ref {
+      width: 100%;
+      display: block;
+      border-top: 1px solid #E5E5E5;
+    }
+  </style>
+</head>
+<body>
+  <article class="board" aria-label="Brand board Bodega COCOA USFQ">
+    <header class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="logo-bodega">BODEGA</div>
+          <div class="logo-cocoa">COCOA</div>
+          <p class="tagline">Sistema de reservas de equipos audiovisuales · USFQ</p>
+        </div>
+        <p class="slogan">WE WANT MORE HUMANS,<br /><span>MORE DRAGONS.</span></p>
+      </div>
+      <div class="keywords">
+        <strong>Reserva</strong> · <strong>Crea</strong> · <strong>Explora</strong>
+      </div>
+      <p class="credits">
+        Brand board y dirección de diseño:
+        <strong>Paula Hidalgo</strong> · <strong>Amelia Duclos</strong>
+        · Grupo 1 · Web Development 3
+      </p>
+    </header>
+
+    <div class="grid">
+      <section>
+        <h2>Paleta de colores</h2>
+        <div class="swatches">
+          <div class="swatch">
+            <div class="chip" style="background:#E11B22"></div>
+            <div class="meta"><strong>Rojo USFQ</strong><code>#E11B22 — acciones primarias</code></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#231F20"></div>
+            <div class="meta"><strong>Negro</strong><code>#231F20 — texto y encabezados</code></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#939598"></div>
+            <div class="meta"><strong>Gris</strong><code>#939598 — secundario / bordes</code></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#FFFFFF; border-bottom:1px solid #E5E5E5"></div>
+            <div class="meta"><strong>Blanco</strong><code>#FFFFFF — fondos y contraste</code></div>
+          </div>
+        </div>
+        <p style="margin-top:14px;font-size:13px;color:#5C5E60">
+          Contraste de texto ≥ 4.5:1 (negro sobre blanco; blanco sobre rojo/negro).
+          Semánticos: Success <code>#16A34A</code> · Warning <code>#F59E0B</code> · Danger <code>#DC2626</code>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Tipografía</h2>
+        <div class="type-row">
+          <div class="name">Helvetica — UI y cuerpo</div>
+          <div class="type-helvetica">Aa Bb Cc 123</div>
+        </div>
+        <div class="type-row">
+          <div class="name">Baskerville — títulos secundarios</div>
+          <div class="type-baskerville">Reserva con claridad</div>
+        </div>
+        <div class="type-scale">
+          Escala:
+          <span>12</span> · <span>14</span> · <span>16</span> ·
+          <span>20</span> · <span>24</span> · <span>32</span> · <span>40</span> px
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <h2>Componentes clave</h2>
+      <div class="btn-row">
+        <button class="btn btn-primary" type="button">Reservar equipo →</button>
+        <button class="btn btn-secondary" type="button">Ver disponibilidad →</button>
+      </div>
+
+      <div class="field">
+        <label for="uso">Comentario de uso</label>
+        <input id="uso" type="text" placeholder="Ej. Rodaje corto documental COCOA" />
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div class="card">
+          <div class="photo">Cámara · foto</div>
+          <h3 style="font-family:var(--sans);font-size:16px;margin:0">Sony FX30</h3>
+          <div style="font-size:12px;color:#5C5E60">ID: CAM-FX30-03</div>
+          <div class="badge"><span class="dot"></span> Disponible</div>
+          <button class="btn btn-primary" type="button" style="width:100%;justify-content:center">Reservar equipo →</button>
+        </div>
+
+        <div>
+          <h3 style="font-family:var(--sans);font-size:14px;margin-bottom:10px">Estados de una reserva</h3>
+          <div class="states">
+            <div class="state"><span>En carrito</span><span class="pill gris">Gris</span></div>
+            <div class="state"><span>Pendiente de aprobación</span><span class="pill warn">Warning</span></div>
+            <div class="state"><span>Aprobada</span><span class="pill ok">Success</span></div>
+            <div class="state"><span>Rechazada</span><span class="pill bad">Danger</span></div>
+            <div class="state"><span>Cancelada</span><span class="pill gris">Gris</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pantalla real del producto</h2>
+      <div class="screen">
+        <div class="screen-bar">
+          <div class="brand">BODEGA <span>COCOA</span> USFQ</div>
+          <div class="screen-nav">
+            <span>Equipos</span>
+            <span>Calendario</span>
+            <span>Mi cuenta</span>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div>
+            <div style="font-size:13px;color:#5C5E60;margin-bottom:8px">Categorías</div>
+            <div class="cats">
+              <div class="cat">Cámaras</div>
+              <div class="cat">Lentes</div>
+              <div class="cat">Trípodes</div>
+            </div>
+          </div>
+          <div class="cal">
+            <strong>Disponibilidad · 24h</strong>
+            <div class="cal-grid">
+              <span>1</span><span>2</span><span class="on">3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+              <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+            </div>
+            <div style="margin-top:8px;color:#5C5E60">Horario: 09:00 – 18:00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tono de voz</h2>
+      <p style="margin-bottom:14px;font-size:14px">Directo, claro e institucional.</p>
+      <div class="voice">
+        <div class="voice-box yes">
+          <h4>Así sí</h4>
+          <ul>
+            <li>“Reserva el equipo que necesitas.”</li>
+            <li>“Tu reserva fue aprobada. Descarga el PDF.”</li>
+            <li>“Este equipo está en mantenimiento.”</li>
+          </ul>
+        </div>
+        <div class="voice-box no">
+          <h4>Así no</h4>
+          <ul>
+            <li>“Request processed.”</li>
+            <li>“Item unavailable.”</li>
+            <li>“Oops! Something went wrong.”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <img class="photo-ref" src="brand-board.jpg" alt="Referencia visual fotográfica del brand board Bodega COCOA USFQ" />
+
+    <p class="ref">
+      Pieza de identidad para Avance #2 · Ver también
+      <a href="../../DESIGN.md">DESIGN.md</a> y
+      <a href="../prd/prd.md">PRD</a>.
+      Diseño: Paula Hidalgo y Amelia Duclos.
+    </p>
+  </article>
+</body>
+</html>

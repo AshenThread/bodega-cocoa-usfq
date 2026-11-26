@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/diseno/brand-board.html"
+        ],
+        "createdAt": "2026-11-26T03:26:28.209Z",
+        "reason": "Brand board documental: muestra paleta USFQ (rojo/negro/gris oficiales) y mockups; texto de UI legible ya usa #5C5E60 / #D0D1D2."
+      }
+    ]
+  }
+}
