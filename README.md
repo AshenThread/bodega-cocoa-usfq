@@ -36,6 +36,17 @@ Plataforma web para que estudiantes y profesores reserven equipos y espacios de 
 4. Aprobación, notificaciones y documentos
 5. Panel de administración
 
+## Hoja de comandos
+
+```bash
+./scripts/menu.sh
+```
+
+- `[1]` Revisión actual (local + GitHub + recomendaciones)
+- `[2]` Actualizar repo y estado (`docs/estado.md`)
+- `[9]` Cerrar sesión (guardar y checklist para cerrar Cursor)
+- `[3]`–`[8]` libres
+
 ## Hooks de commits (autoría humana)
 
 ```bash
