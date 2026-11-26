@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Blocks commit messages that still contain AI co-author trailers.
+set -euo pipefail
+
+MSG_FILE="${1:-}"
+
+if [[ -z "$MSG_FILE" || ! -f "$MSG_FILE" ]]; then
+  exit 0
+fi
+
+if grep -qiE '^[[:space:]]*Co-authored-by:.*(Cursor|Copilot|ChatGPT|OpenAI|Claude|Anthropic|Gemini|Google|Composer|Grok|xAI)' "$MSG_FILE"; then
+  echo "Error: no se permiten trailers Co-authored-by de IA. El autor debe ser el integrante del equipo." >&2
+  exit 1
+fi
+
+exit 0

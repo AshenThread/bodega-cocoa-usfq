@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": ".cursor/hooks/guard-git-commit.sh",
+        "matcher": "Shell",
+        "failClosed": true
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/guard-git-commit.sh",
+        "matcher": "git\\s+commit",
+        "failClosed": true
+      }
+    ]
+  }
+}

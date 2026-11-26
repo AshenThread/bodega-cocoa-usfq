@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Removes AI co-author trailers so commits show only the human author.
+set -euo pipefail
+
+MSG_FILE="${1:-}"
+SOURCE="${2:-}"
+
+if [[ -z "$MSG_FILE" || ! -f "$MSG_FILE" ]]; then
+  exit 0
+fi
+
+# Strip Co-authored-by lines from Cursor / Copilot / ChatGPT / Claude / Gemini / Composer
+tmp="$(mktemp)"
+grep -viE '^[[:space:]]*Co-authored-by:.*(Cursor|Copilot|ChatGPT|OpenAI|Claude|Anthropic|Gemini|Google|Composer|Grok|xAI)' "$MSG_FILE" > "$tmp" || true
+mv "$tmp" "$MSG_FILE"
+
+exit 0

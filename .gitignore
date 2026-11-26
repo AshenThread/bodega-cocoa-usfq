@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Build / cache
+dist/
+build/
+.next/
+.cache/
+*.log
+.DS_Store
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Coverage / test
+coverage/
+.nyc_output/
