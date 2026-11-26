@@ -1,0 +1,89 @@
+BODEGA COCOA USFQ
+Proyecto final · Web Development 3 · Avance #2
+PRD, brand board y sistema de diseño
+Fecha: 25 de noviembre de 2026
+
+==================================================
+1. DATOS DEL EQUIPO
+==================================================
+Curso: Web Development 3
+Entrega: Avance #2 — PRD, brand board y sistema de diseño
+Equipo: Grupo 1
+Integrantes:
+- Ismael Zambrano
+- Paula Hidalgo (diseño / brand board)
+- Amelia Duclos (diseño / brand board)
+
+==================================================
+2. ENLACE AL REPOSITORIO (ENTREGA PRINCIPAL)
+==================================================
+https://github.com/AshenThread/bodega-cocoa-usfq
+
+Visibilidad: público
+Rama: main
+
+Subir este enlace a D2L. El docente revisa el repositorio.
+
+==================================================
+3. ARCHIVOS EN EL REPOSITORIO
+==================================================
+- docs/prd/prd.md — PRD completo del MVP
+- docs/diseno/brand-board.html — Brand board (HTML)
+- docs/diseno/brand-board.jpg — Brand board (imagen)
+- DESIGN.md — Sistema de diseño
+- README.md — Nombre, integrantes y descripción
+
+==================================================
+4. RESUMEN DEL PRODUCTO
+==================================================
+Sistema de reservas de equipos audiovisuales de la Bodega COCOA (USFQ).
+MVP: unidades con ID único, carrito multi-ítem, horarios 24h, aprobación
+manual, notificaciones por correo, PDF y panel de administración.
+
+==================================================
+5. REGLAS CLAVE DEL CLIENTE (11/11/26)
+==================================================
+- Sin aprobación automática
+- ID único por unidad
+- Carrito multi-ítem; expira a 1 hora
+- Cancelación mínimo 1 hora antes
+- Horarios 24h
+- Responsive prioritario
+- Mantenimiento visible; daño/extravío solo admin
+- Nombre: Bodega COCOA USFQ
+
+==================================================
+6. ÉPICAS DEL MVP
+==================================================
+1. Autenticación y gestión de usuarios
+2. Catálogo e inventario
+3. Proceso de reserva
+4. Aprobación, notificaciones y documentos
+5. Panel de administración
+
+==================================================
+7. CÓMO REVISAR
+==================================================
+1. README
+2. docs/prd/prd.md
+3. docs/diseno/brand-board.html (o .jpg)
+4. DESIGN.md
+
+==================================================
+8. USO DE IA
+==================================================
+Grok (xAI) para estructurar el PRD. Cursor para apoyo de redacción del
+sistema de diseño y organización del repo. Identidad visual: Paula Hidalgo
+y Amelia Duclos. Decisiones finales revisadas por el equipo según el cliente.
+
+==================================================
+9. ENLACES DIRECTOS
+==================================================
+Repo: https://github.com/AshenThread/bodega-cocoa-usfq
+PRD: https://github.com/AshenThread/bodega-cocoa-usfq/blob/main/docs/prd/prd.md
+Brand board HTML: https://github.com/AshenThread/bodega-cocoa-usfq/blob/main/docs/diseno/brand-board.html
+Brand board imagen: https://github.com/AshenThread/bodega-cocoa-usfq/blob/main/docs/diseno/brand-board.jpg
+DESIGN.md: https://github.com/AshenThread/bodega-cocoa-usfq/blob/main/DESIGN.md
+README: https://github.com/AshenThread/bodega-cocoa-usfq/blob/main/README.md
+
+Grupo 1 · Bodega COCOA USFQ · Avance #2 · 25/11/2026
